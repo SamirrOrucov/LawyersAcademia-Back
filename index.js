@@ -5,15 +5,16 @@ import cors from "cors";
 import { newsRoute } from "./routes/NewsRoute.js";
 import { formRoute } from "./routes/FormRoute.js";
 import { articleCountModelRoute } from "./routes/ArticleCounterRoute.js";
+import { youtubeLinksRoute } from "./routes/YoutubeLinksRoute.js";
 const app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/news", newsRoute);
 app.use("/upload", formRoute);
 app.use("/articleCount", articleCountModelRoute);
+app.use("/youtubeLinks", youtubeLinksRoute);
 app.use("/static", express.static("public"));
 app.use("/uploads", express.static("uploads"));
-
 
 mongoose
   .connect(process.env.DB_KEY)
