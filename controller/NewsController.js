@@ -16,12 +16,14 @@ export const getNewsById = async (req, res) => {
   } catch (error) {
     res.send(error.message);
   }
-};
+};  
 export const createNews = async (req, res) => {
   try {
     const { title, content } = req.body;
     const newNews = new NewsModel({
-      mainImage: req.static ? "http://localhost:3003/static/" + req.static : null,
+      mainImage: req.static
+        ? "http://localhost:3003/static/" + req.static
+        : null,
       title,
       content,
     });
@@ -38,9 +40,11 @@ export const updateNews = async (req, res) => {
     const { title, content } = req.body;
 
     const updatedNews = await NewsModel.findByIdAndUpdate(id, {
-      mainImage: req.static ? "http://localhost:3003/static/" + req.static : null,
+      mainImage: req.static
+        ? "http://localhost:3003/static/" + req.static
+        : null,
       title,
-      content
+      content,
     });
     res.send("News Updated!");
   } catch (error) {

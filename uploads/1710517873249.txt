@@ -1,0 +1,347 @@
+#1st question
+a=int(input("small catheter="))
+b=int(input("big catheter="))
+print( "area of right triangle=",((a*b)/2))
+
+#2th question
+list=[]
+a=input("numbers=")
+for i in range (0,10):
+    if not str(i) in a:
+        list.append(i)
+print(list)
+
+#3th question
+list=[]
+for i in range(1,101):
+    if i%3==0 and i%5==0:
+        list.append(i)
+print(list)
+
+#4th question
+list=[]
+for i in range(1,101):
+    if i%2==0 and i%4==0:
+        list.append(i)
+print(list)
+
+#5th question
+list=[]
+a=int(input("number="))
+for i in range(0,a):
+    if i%2==0:
+        list.append(i)
+print(list)
+
+#6th question
+list = [2,2,4,3,6,9,6,1,5,1]
+list1 = []
+for i in list:
+	if i <= 3:
+		list1.append(i)
+print(list1)
+
+#7th question
+list = [2,2,4,3,6,9,6,1,5,1,7,8]
+list1 = []
+for i in list:
+	if i <= 5:
+		list1.append(i)
+print(list1)
+
+#8th question
+a=input("numbers=")
+sum=0
+for i in a:
+    sum=sum+int(i)
+print(sum)
+
+#9th question
+text=input("Enter a sentence:")
+a=text.split()
+print(a[-1])
+
+#10th question
+numbers = [int(x) for x in input("Enter a number:").split(",")]
+for number in numbers:
+	print(number**2,end= " ")
+
+#11th question
+list=[]
+for i in range(100,201):
+    if i%3==0 and i%5!=0:
+        list.append(i)
+print(list)
+
+#12th question
+list=[]
+for i in range(500,1001):
+    if i%9==0 and i%8!=0:
+        list.append(i)
+print(list)
+
+#13th question
+list=[]
+for i in range(300,501):
+    if i%6==0 and i%7!=0:
+        list.append(i)
+print(list)
+
+
+#14th question
+sentence=input("Enter a sentence:")
+vowels= ["a","ı","o","u","e","ə","i","ö","ü","A","I","O","U","E","Ə","I","Ö","Ü"]
+vowel_letters = 0
+i = 0
+for i in sentence:
+    if i in vowels :
+        vowel_letters += 1
+print(vowel_letters)
+
+#15th question
+text=input("Enter a sentence:")
+a=text.split()
+print(a[::-1])
+
+#funksiya ile
+def func(text):
+    a=text.split()
+    print(a[::-1])
+func("random 841 group")
+
+#16th question
+text=input("Enter a sentence:")
+a=text.split()
+print(len(a))
+
+#17th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+number = 0
+for i in word:
+    if len(i) == 4:
+        number += 1
+print(number)
+
+#18th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+number = 0
+for i in word:
+    if len(i) == 3:
+        number += 1
+print(number)
+
+#19th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+number = 0
+for i in word:
+    if len(i) == 5:
+        number += 1
+print(number)
+
+#20th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+for i in word:
+    if i[0] == "a" and i[-1]== "m":
+      print(i)
+    else:
+        continue
+
+#21th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+for i in word:
+    if i[0] == "z" and i[-1]== "n":
+      print(i)
+    else:
+        continue
+
+#22th question
+sentence = input("Enter a sentence:")
+word = sentence.split()
+for i in word:
+    if i[0] == "n" and i[-1]== "l":
+      print(i)
+    else:
+        continue
+
+#23th question
+sentence = input("Enter a sentece:")
+word = sentence.split()
+for i in word:
+    if i[-3:] == "lar":
+        print(i)
+
+#24th question
+sentence = input("Enter a sentece:")
+word = sentence.split()
+for i in word:
+    if i[-1:] == "s":
+        print(i)
+
+#25th question
+sentence = input("Enter a sentece:")
+word = sentence.split()
+for i in word:
+    if i[-1:] == "z":
+        print(i)
+
+#26th question
+sentence = input("Enter a sentence:")
+x= sentence.split()
+print(len(x))
+
+#27th question
+total=1
+a=int(input("number="))
+for i in range(1,a):
+    if i%7==0:
+        total=total*i
+print(total)
+
+#funksiya ile
+def my_function(a):
+    total=1
+    for i in range(1,a):
+        if i%7==0:
+            total=total*i
+    print(total)
+my_function(32)     
+
+#28th question
+total=1
+a=int(input("number="))
+for i in range(1,a):
+    if i%9==0:
+        total=total*i
+print(total)
+
+#funksiya ile
+def my_function(a):
+    total=1
+    for i in range(1,a):
+        if i%9==0:
+            total=total*i
+    print(total)
+my_function(20)
+
+#29th question
+total=1
+a=int(input("number="))
+for i in range(1,a):
+    if i%6==0:
+        total=total*i
+print(total)
+
+#funksiya ile
+def my_function(a):
+    total=1
+    for i in range(1,a):
+        if i%6==0:
+            total=total*i
+    print(total)
+my_function(55)
+
+#30th question
+lst = []
+a=int(input("number1:"))
+b=int(input("number2:"))
+for i in range(a,b+1):
+    if i%6!=0:
+        lst.append(i)
+print(lst)
+
+#31th question
+lst = []
+a=int(input("number1:"))
+b=int(input("number2:"))
+for i in range(a,b+1):
+    if i%5!=0:
+        lst.append(i)
+print(lst)
+
+#32th question
+lst = []
+a=int(input("number1:"))
+b=int(input("number2:"))
+for i in range(a,b+1):
+    if i%7!=0:
+        lst.append(i)
+print(lst)
+
+#33th question
+n = int(input("number:"))
+list = []
+for i in range(n):
+	if i%10 == 3:
+		list.append(i)
+print(list)
+
+#34th question
+n = int(input("number:"))
+list = []
+for i in range(n):
+	if i%10 == 7:
+		list.append(i)
+print(list)
+
+#35th question
+a = int(input("number:"))
+if a%2 == 0:
+    print("even")
+else:
+    print("odd")
+
+#36th question
+x =int(input("number x:"))
+y =int(input("number y:"))
+if x>y:
+    print(x)
+elif y>x:
+    print(y)
+else:
+    print("equal")
+
+#37th question
+sentence = input("Enter a sentence:")
+number = 0
+for i in sentence:
+    if i.isupper():
+        number = number + 1
+print(number)
+
+#38th question
+sentence = input("Enter a sentence:")
+number = 0
+for i in sentence:
+    if i.islower():
+        number = number + 1
+print(number)
+
+#39th question
+a=int(input("number1="))
+b=int(input("number2="))
+if(a != b):
+    print("number1=",b)
+    print("number2=",a)
+else:
+    print("number1 equal number2")
+
+#40th question
+word=input("Enter your word: ")
+mainletter='a'
+if mainletter in word:
+    print("true")
+else:
+    print("false")
+
+#41th question
+word=input("Enter your word: ")
+mainletter='z'
+if mainletter in word:
+    print("true")
+else:
+    print("false")

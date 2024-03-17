@@ -9,8 +9,9 @@ const newsSchema = new Schema(
     content: String,
   },
   {
-    timestamps: true,
-    
+    timestamps: {
+      currentTime: () => new Date().getTime() + 4 * 60 * 60 * 1000,
+    },
   }
 );
 export const NewsModel = mongoose.model("NewsModel", newsSchema);

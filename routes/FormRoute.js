@@ -14,6 +14,6 @@ export const formRoute = Router();
 
 formRoute.get("/", getFormReq);
 formRoute.get("/:id", getFormReqById);
-formRoute.post("/", upload.single("file"), createForm);
-formRoute.put("/:id", upload.single("file"), updateForm);
+formRoute.post("/", upload.single("upload"), createForm);
+formRoute.put("/:id", upload.single("upload"), updateForm);
 formRoute.delete("/:id", deleteForm);
