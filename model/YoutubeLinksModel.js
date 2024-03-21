@@ -8,7 +8,9 @@ const youtubeLinksSchema = new Schema(
     link: String,
   },
   {
-    timestamps: true,
+    timestamps: {
+      currentTime: () => new Date().getTime() + 4 * 60 * 60 * 1000,
+    },
   }
 );
 export const YoutubeLinksModel = mongoose.model(

@@ -8,7 +8,9 @@ const articleCounterSchema = new Schema(
     count: Number,
   },
   {
-    timestamps: true,
+    timestamps: {
+      currentTime: () => new Date().getTime() + 4 * 60 * 60 * 1000,
+    },
   }
 );
 export const ArticleCounterModel = mongoose.model(
