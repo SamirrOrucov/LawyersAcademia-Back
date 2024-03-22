@@ -20,26 +20,27 @@ export const getLegislationById = async (req, res) => {
 };
 
 export const getLegislationWithLaws = async (req, res) => {
-    try {
-        const {id}=req.params
-      const legislation = await LegislationLawModel.find({legislationId:id}).populate();
-      res.send(legislation);
-    } catch (error) {
-      res.send(error.message);
-    }
-  };
-
+  try {
+    const { id } = req.params;
+    const legislation = await LegislationLawModel.find({
+      legislationId: id,
+    }).populate();
+    res.send(legislation);
+  } catch (error) {
+    res.send(error.message);
+  }
+};
 
 export const createLegislation = async (req, res) => {
   try {
-    if (!req.body ) {
+    if (!req.body) {
       throw new Error("Missing required data in request body");
     }
 
     const { title } = req.body;
 
     const newLegislation = new LegislationModel({
-      title
+      title,
     });
 
     await newLegislation.save();

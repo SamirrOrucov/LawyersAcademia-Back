@@ -1,7 +1,13 @@
 import { Router } from "express";
 
-
-import { createLegislation, deleteLegislation, getLegislation, getLegislationById, getLegislationWithLaws, updateLegislation } from "../controller/LegislationController.js";
+import {
+  createLegislation,
+  deleteLegislation,
+  getLegislation,
+  getLegislationById,
+  getLegislationWithLaws,
+  updateLegislation,
+} from "../controller/LegislationController.js";
 
 export const legislationRoute = Router();
 
