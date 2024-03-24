@@ -1,7 +1,5 @@
 import { LegislationLawModel } from "../model/LegislationLawModel.js";
-import {
-  LegislationModel,
-} from "../model/LegislationModel.js";
+import { LegislationModel } from "../model/LegislationModel.js";
 
 export const getLegislationLaw = async (req, res) => {
   try {
@@ -23,7 +21,7 @@ export const getLegislationLawById = async (req, res) => {
 
 export const createLegislationLaw = async (req, res) => {
   try {
-    if (!req.body ) {
+    if (!req.body) {
       throw new Error("Missing required data in request body");
     }
 

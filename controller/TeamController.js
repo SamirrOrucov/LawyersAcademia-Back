@@ -1,4 +1,3 @@
-import log from "foo/src/tasks/log.js";
 import { TeamModel } from "../model/TeamModel.js";
 
 export const getAllTeam = async (req, res) => {
@@ -20,16 +19,13 @@ export const getTeamMemberById = async (req, res) => {
 };
 export const createTeamMember = async (req, res) => {
   try {
-    const { name, role, socialMedia1, socialMedia2, socialMedia3 } = req.body;
+    const { name, role, phone, email } = req.body;
     const newTeamMember = await TeamModel({
-      profilImage: req.teams
-        ? "http://localhost:3003/team/" + req.teams
-        : null,
+      profilImage: req.teams ? "http://localhost:3003/team/" + req.teams : null,
       name,
       role,
-      socialMedia1,
-      socialMedia2,
-      socialMedia3,
+      phone,
+      email,
     });
     console.log(req.teams);
     console.log(req.file);
@@ -43,13 +39,13 @@ export const createTeamMember = async (req, res) => {
 export const updateTeamMember = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, role, socialMedia1, socialMedia2, socialMedia3 } = req.body;
+    const { name, role, phone, email } = req.body;
     const updateTeamMember = await TeamModel.findByIdAndUpdate(id, {
+      profilImage: req.teams ? "http://localhost:3003/team/" + req.teams : null,
       name,
       role,
-      socialMedia1,
-      socialMedia2,
-      socialMedia3,
+      phone,
+      email,
     });
     res.send("Team member updated!");
   } catch (error) {

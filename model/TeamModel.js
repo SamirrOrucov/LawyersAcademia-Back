@@ -7,10 +7,8 @@ const teamSchema = new Schema(
     profilImage: String,
     name: String,
     role: String,
-    socialMedia1:String,
-    socialMedia2:String,
-    socialMedia3:String,
-
+    email: String,
+    phone: String,
   },
   {
     timestamps: {
