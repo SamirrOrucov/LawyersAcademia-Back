@@ -9,6 +9,7 @@ import { youtubeLinksRoute } from "./routes/YoutubeLinksRoute.js";
 import { legislationRoute } from "./routes/LegislationRoute.js";
 import { legislationLawRoute } from "./routes/LegislationLawRoute.js";
 import { teamRouter } from "./routes/TeamRoute.js";
+import { bookRouter } from "./routes/LibraryRoute.js";
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -19,10 +20,12 @@ app.use("/youtubeLinks", youtubeLinksRoute);
 app.use("/legislation", legislationRoute);
 app.use("/legislationLaw", legislationLawRoute);
 app.use("/teams", teamRouter);
+app.use("/book", bookRouter);
 app.use("/static", express.static("public"));
 app.use("/uploads", express.static("uploads"));
 app.use("/team", express.static("team"));
-
+app.use("/books", express.static("books"));
+app.use("/bookPhotos", express.static("bookPhoto"));
 mongoose
   .connect(process.env.DB_KEY)
   .then(() => console.log("Connected!"))
